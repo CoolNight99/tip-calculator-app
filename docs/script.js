@@ -21,15 +21,25 @@ const resetBtn = document.querySelector(".reset-btn");
 function calculateTip(percent) {
     let tipAmountValue = (billAmountValue * percent).toFixed(2);
 
-    tipAmount.innerHTML = tipAmountValue;
+    updateTipPerPerson(tipAmountValue);
 
     let totalAmountValue = parseFloat(billAmountValue) + parseFloat(tipAmountValue);
 
     updateTotalPerPerson(totalAmountValue);
 }
 
+function updateTipPerPerson(tipAmountValue) {
+    peopleAmountValue = parseInt(noOfPeople.value) || 1;
+
+    tipAmountValue = tipAmountValue / peopleAmountValue;
+    tipAmount.innerHTML = tipAmountValue.toFixed(2);
+
+    return tipAmountValue;
+}
+
 function updateTotalPerPerson(totalAmountValue) {
     peopleAmountValue = parseInt(noOfPeople.value) || 1;
+
     totalAmountValue = (totalAmountValue / peopleAmountValue).toFixed(2);
 
     totalAmount.innerHTML = totalAmountValue;
