@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+
+<body>
+  <img class="logo" src="./images/logo.svg" alt="logo"/>
+  <main>
+    <div class="calculator-card">
+      <div class="calculation-div">
+        <p>Bill</p>
+        <input class="bill-input" id="bill-amount" type="number" pattern="\d*" placeholder="0">
+        <p>Select Tip %</p>
+        <div class="tip-btn-div">
+          <button class="tip-btn five-percent">5%</button>
+          <button class="tip-btn ten-percent">10%</button>
+          <button class="tip-btn fifteen-percent">15%</button>
+          <button class="tip-btn twentyfive-percent">25%</button>
+          <button class="tip-btn fifty-percent">50%</button>
+          <input class="custom-tip" placeholder="Custom" type="number"/>
+        </div>
+        <div class="no-of-people">
+          <p>Number of People</p>
+          <p class="zero-warning">Can't be zero</p>
+        </div>
+        <input class="people-input" id="people-amount" type="number" pattern="\d+" placeholder="0">
+      </div>
+      <div class="amount-div">
+        <div class="amount-div-grid">
+          <p>Tip Amount<br><span class="per-person">/ person</span></p>
+          <h1>$<span class="tip-amount">0.00</span></h1>
+          <p>Total<br><span class="per-person">/ person</span></p>
+          <h1 class="total-amount">$0.00</h1>
+        </div>
+        <button class="reset-btn">RESET</button>
+      </div>
+    </div>
+  </main>
+  <div class="attribution">
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>
+    <p>Coded by <a href="#">CoolNight99</a>.</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
